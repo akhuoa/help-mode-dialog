@@ -1,5 +1,5 @@
 {
-  "name": "vue-component-template",
+  "name": "help-mode-dialog",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -27,12 +27,12 @@
     "*.json",
     "*.js"
   ],
-  "main": "./dist/vue-component-template.umd.cjs",
-  "module": "./dist/vue-component-template.js",
+  "main": "./dist/help-mode-dialog.umd.cjs",
+  "module": "./dist/help-mode-dialog.js",
   "exports": {
     ".": {
-      "import": "./dist/vue-component-template.js",
-      "require": "./dist/vue-component-template.umd.cjs"
+      "import": "./dist/help-mode-dialog.js",
+      "require": "./dist/help-mode-dialog.umd.cjs"
     },
     "./dist/style.css": "./dist/style.css"
   },

@@ -4,16 +4,16 @@ Base template to create new Vue component.
 
 This template includes:
 
-- `VueComponentTemplate` component in `src/components`
+- `HelpModeDialog` component in `src/components`
 - API documentation in `docs` using `vitepress`
-- Cypress component testing for `VueComponentTemplate` component in `cypress/component`
+- Cypress component testing for `HelpModeDialog` component in `cypress/component`
 - ESLint
 
 
 ## Usage
 
 1. Create a new repository using this template (choose repository template when creating a new repo on GitHub and select this template).
-2. Update component name, `VueComponentTemplate` to `YourComponentName`. (See [Updating Component Names](#Updating-Component-Names) for details).
+2. Update component name, `HelpModeDialog` to `YourComponentName`. (See [Updating Component Names](#Updating-Component-Names) for details).
 3. Configure GitHub page for API documentation (Settings > GitHub Pages > Build and deployment > Chnage "Deploy from a branch" to "GitHub Actions").
 4. Run `npm install`.
 5. Run `npm run serve` for development.
@@ -22,11 +22,11 @@ This template includes:
 
 ### Updating Component Names
 
-If you are using VSCode, `[Ctrl + Shift + F]` or `[Cmd + Shift + F]` from root directory and search for "**vue-component-template**", and replace with your new component name.
+If you are using VSCode, `[Ctrl + Shift + F]` or `[Cmd + Shift + F]` from root directory and search for "**help-mode-dialog**", and replace with your new component name.
 
-Do the same thing for "**VueComponentTemplate**".
+Do the same thing for "**HelpModeDialog**".
 
-Rename `src/components/VueComponentTemplate.vue` and `cypress/component/VueComponentTemplate.cy.js` to your new component name.
+Rename `src/components/HelpModeDialog.vue` and `cypress/component/HelpModeDialog.cy.js` to your new component name.
 
 
 ## API Documentation

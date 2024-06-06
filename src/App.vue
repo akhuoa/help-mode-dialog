@@ -1,9 +1,9 @@
 <script setup>
-import VueComponentTemplate from './components/VueComponentTemplate.vue';
+import HelpModeDialog from './components/HelpModeDialog.vue';
 </script>
 
 <template>
-  <VueComponentTemplate title="Vue Component Template" />
+  <HelpModeDialog title="Vue Component Template" />
 </template>
 
 <style scoped>

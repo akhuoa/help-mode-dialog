@@ -7,7 +7,7 @@
  * Update the components array.
  */
 const COMPONENTS = [
-  'VueComponentTemplate'
+  'HelpModeDialog'
 ]
 
 import fs from 'fs'

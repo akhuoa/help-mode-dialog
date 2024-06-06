@@ -1,5 +1,5 @@
-import VueComponentTemplate from './VueComponentTemplate.vue';
+import HelpModeDialog from './HelpModeDialog.vue';
 
 export {
-  VueComponentTemplate
+  HelpModeDialog
 };
