@@ -5,8 +5,8 @@ on:
   push:
     branches: ["main"]
     paths-ignore:
-      - '.vscode/*'
-      - 'docs/**/*'
+      - '.vscode/**'
+      - 'docs/**'
       - 'README.md'
       - 'vuese-generator.js'
   pull_request:
