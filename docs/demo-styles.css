@@ -5,6 +5,7 @@
   border: 1px solid var(--vp-c-divider);
   position: relative;
   z-index: 1; /* just for demo, to prevent tooltips go out of container */
+  overflow: hidden;
 }
 
 .demo-container-inner {

@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "Vue Component Template"
+  name: "Help Mode Dialog"
   text: "API documentation"
-  tagline: Some description about the component.
+  tagline: HelpModeDialog component for flatmapvuer and scaffoldvuer.
   actions:
     - theme: brand
       text: API Reference

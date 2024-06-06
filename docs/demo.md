@@ -6,7 +6,12 @@
   <div class="demo-container-inner">
     <ClientOnly>
       <HelpModeDialog
-        title="Vue Component Template"
+        v-if="helpMode && useHelpModeDialog"
+        ref="multiflatmapHelp"
+        :multiflatmapRef="multiflatmapRef"
+        :lastItem="helpModeLastItem"
+        @show-next="onHelpModeShowNext"
+        @finish-help-mode="onFinishHelpMode"
       />
     </ClientOnly>
   </div>
@@ -15,6 +20,29 @@
 <script setup>
 import { defineClientComponent } from "vitepress";
 import "./demo-styles.css";
+
+defineProps({
+  helpMode: {
+    type: Boolean,
+    default: true,
+  },
+  helpModeActiveItem: {
+    type: Number,
+    default: 0
+  },
+  helpModeLastItem: {
+    type: Boolean,
+    default: false
+  },
+  useHelpModeDialog: {
+    type: Boolean,
+    default: true
+  },
+  multiflatmapRef: {
+    type: Object,
+    default: null
+  },
+});
 
 const HelpModeDialog = defineClientComponent(() => {
   return import("../src/components/HelpModeDialog.vue");
@@ -27,7 +55,12 @@ const HelpModeDialog = defineClientComponent(() => {
 ```js-vue
   <div class="your-outer-container">
     <HelpModeDialog
-      title="Vue Component Template"
+      v-if="helpMode && useHelpModeDialog"
+      ref="multiflatmapHelp"
+      :multiflatmapRef="multiflatmapRef"
+      :lastItem="helpModeLastItem"
+      @show-next="onHelpModeShowNext"
+      @finish-help-mode="onFinishHelpMode"
     />
   </div>
 
