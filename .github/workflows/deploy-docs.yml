@@ -5,8 +5,8 @@ on:
   push:
     branches: ["docs", "main"]
     paths-ignore:
-      - '.vscode/**'
-      - 'cypress/**'
+      - '.vscode/*'
+      - 'cypress/**/*'
       - 'cypress.config.js'
       - 'README.md'
 
