@@ -37,6 +37,7 @@
     "./dist/style.css": "./dist/style.css"
   },
   "dependencies": {
+    "element-plus": "^2.7.4",
     "vue": "^3.4.21"
   },
   "devDependencies": {
