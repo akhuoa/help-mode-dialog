@@ -32,9 +32,13 @@ function generateMarkdown(file) {
     // const parserResult = parser(fileContent)
     const parserResult = parseSource(fileContent, fileWithPath)
     parserResult.then((result) => {
-      const name = result.displayName
-      const desc = result.description
-      const props = result.props
+      const {
+        displayName: name,
+        description: desc,
+        props,
+        events,
+        methods
+      } = result
 
       // transform props to vuese styles
       props.forEach((prop) => {
@@ -44,12 +48,24 @@ function generateMarkdown(file) {
         prop.default = prop.defaultValue.value.replaceAll('\n', '')
       })
 
+      // transform events to vuese styles
+      events.forEach((ev) => {
+        ev.describe = [ev.description]
+      })
+
+      // transform methods to vuese styles
+      methods.forEach((method) => {
+        method.describe = [method.description]
+      })
+
       const parseResult = {
         name: name,
         componentDesc: {
           default: [desc]
         },
-        props: props,
+        props,
+        events,
+        methods,
       }
       const r = new Render(parseResult)
       const renderResult = r.render()
