@@ -51,7 +51,7 @@ export default {
 
 ## API Reference
 
-API reference is available on [GitHub Pages website](https://akhuoa.github.io/help-mode-dialog/components/HelpModeDialog.html).
+API reference is available on [GitHub Pages website](https://akhuoa.github.io/help-mode-dialog/components/HelpModeDialog.html). The descriptions of `props`, `methods` and `events` can be found on the API reference.
 
 
 ## Development
