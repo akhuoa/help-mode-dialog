@@ -1,3 +1,6 @@
+![Component Test](https://github.com/akhuoa/help-mode-dialog/actions/workflows/component-testing.yml/badge.svg)
+
+
 # Help Mode Dialog
 
 A modal dialog for help mode, linked to the help tooltips of Flatmapvuer, Multiflatmapvuer and Scaffoldvuer components, but also usable with other components.
