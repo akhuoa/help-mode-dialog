@@ -1,49 +1,103 @@
-# Vue Component Template
+# Help Mode Dialog
 
-Base template to create new Vue component.
+A modal dialog for help mode, linked to the help tooltips of Flatmapvuer, Multiflatmapvuer and Scaffoldvuer components, but also usable with other components.
 
-This template includes:
 
-- `HelpModeDialog` component in `src/components`
-- API documentation in `docs` using `vitepress`
-- Cypress component testing for `HelpModeDialog` component in `cypress/component`
-- ESLint
+## Installation
+
+_Not yet published to the npm registry._
+```Bash
+npm install @abi-software/help-mode-dialog
+```
 
 
 ## Usage
 
-1. Create a new repository using this template (choose repository template when creating a new repo on GitHub and select this template).
-2. Update component name, `HelpModeDialog` to `YourComponentName`. (See [Updating Component Names](#Updating-Component-Names) for details).
-3. Configure GitHub page for API documentation (Settings > GitHub Pages > Build and deployment > Chnage "Deploy from a branch" to "GitHub Actions").
-4. Run `npm install`.
-5. Run `npm run serve` for development.
-6. Run `npm run build-bundle` for production build to create bundle.
-7. Run `npm run lint` for ESLint.
+```Vue
+<template>
+  <HelpModeDialog
+    v-if="helpMode && useHelpModeDialog"
+    ref="multiflatmapHelp"
+    :multiflatmapRef="multiflatmapRef"
+    :lastItem="helpModeLastItem"
+    @show-next="onHelpModeShowNext"
+    @finish-help-mode="onFinishHelpMode"
+  />
+</template>
 
-### Updating Component Names
+<script>
+import { HelpModeDialog } from '@abi-software/help-mode-dialog'
 
-If you are using VSCode, `[Ctrl + Shift + F]` or `[Cmd + Shift + F]` from root directory and search for "**help-mode-dialog**", and replace with your new component name.
+export default {
+  components: { HelpModeDialog },
+  data: {
+    helpMode: true,
+    useHelpModeDialog: true,
+    multiflatmapRef: null,
+    helpModeLastItem: false,
+  },
+  methods: {
+    onHelpModeShowNext: function () {
+      // move to next tooltip
+    },
+    onFinishHelpMode: function () {
+      // close help mode dialog
+    }
+  }
+}
+</script>
+```
 
-Do the same thing for "**HelpModeDialog**".
 
-Rename `src/components/HelpModeDialog.vue` and `cypress/component/HelpModeDialog.cy.js` to your new component name.
+## API Reference
+
+API reference is available on [GitHub Pages website](https://akhuoa.github.io/help-mode-dialog/components/HelpModeDialog.html).
 
 
-## API Documentation
+## Development
+
+After cloning the repo:
+
+```Bash
+npm install
+```
+
+Dev mode:
+```Bash
+npm run serve
+```
+The component is in `src/components`.
+
+Build bundle:
+```Bash
+npm run build-bundle
+```
+
+ESLint:
+```Bash
+npm run lint
+```
+
+
+### Component Testing
+Component testing for local development:
+```Bash
+npm run test:open
+```
+The component's test file is in `cypress/component`.
+
+
+### API Documentation
 
 The API documentation is developed with `vitepress` and `vuese`. Documentation pages are in the `docs` folder.
 
-### To run in local development mode
+To run in local development mode:
 ```bash
 npm run docs:watch
 ```
 
 This will start the documentation server with `vitepress` on port `:5173` and watch the components' changes.
 
-
-## Vue 3 + Vite
-
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
 ## Recommended IDE Setup
 
